@@ -143,10 +143,10 @@ def fancy_scatter(ax, x, y, c=None, cmap='viridis', **kwargs):
 
 def add_title_box(ax, title, subtitle=None):
     """Add a styled title with optional subtitle"""
-    ax.set_title(title, fontsize=14, fontweight='bold', color=COLORS['dark'], pad=15)
+    ax.set_title(title, fontsize=14, fontweight='bold', color=COLORS['dark'], pad=32)
     if subtitle:
-        ax.text(0.5, 1.02, subtitle, transform=ax.transAxes, 
-                fontsize=9, color='#64748B', ha='center', style='italic')
+        ax.text(0.5, 1.04, subtitle, transform=ax.transAxes, 
+                fontsize=10, color='#64748B', ha='center', style='italic')
 
 def create_comparison_figure(ncols=2, nrows=1, figsize=None):
     """Create a nicely spaced comparison figure"""
