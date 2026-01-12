@@ -1,0 +1,45 @@
+============================================================
+  TASK 5: Large SOM and Topology Quality
+============================================================
+
+[1] Loading digits dataset...
+   Using 1000 samples (8x8 images = 64 features)
+
+[2] Training 10x10 SOMs with different final sigma...
+
+   Training sigma_final = 0.5...
+   -> TE = 0.038, QE = 4.454
+
+   Training sigma_final = 1.0...
+   -> TE = 0.007, QE = 4.989
+
+   Training sigma_final = 2.0...
+   -> TE = 0.002, QE = 5.678
+
+   Training sigma_final = 3.0...
+   -> TE = 0.000, QE = 6.091
+
+[3] Creating comparison charts...
+  Saved: 05_sigma_comparison.png
+
+[4] Visualizing SOM grid in PCA space...
+  Saved: 05_som_pca_projection.png
+
+[5] Analyzing digit distribution across neurons...
+  Saved: 05_digit_distribution.png
+
+[6] Checking digit neighborhood relationships...
+
+   Confusion pair adjacency analysis:
+   4 vs 9: Separated
+   3 vs 8: Adjacent (expected similar)
+   1 vs 7: Separated
+
+============================================================
+  Large SOM Analysis Complete!
+============================================================
+
+Key Trade-offs:
+   * Small sigma (0.5): High resolution, more topology errors
+   * Large sigma (3.0): Smoother map, less detail
+   * Medium sigma (1.0-2.0): Best balance for digit data

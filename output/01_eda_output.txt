@@ -1,0 +1,34 @@
+============================================================
+  TASK 1: Exploratory Data Analysis
+============================================================
+
+[1] Loading synthetic digit-like data...
+   Shape: (400, 2)
+   Labels: 0=round (0,6,8,9), 1=linear (1,7), 2=curved (2,3,5)
+  Saved: 01_synthetic_data.png
+
+[2] Loading Iris dataset (mandatory)...
+   Shape: (150, 4)
+   Features: ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)']
+   Classes: [np.str_('setosa'), np.str_('versicolor'), np.str_('virginica')]
+  Saved: 01_iris_pairplot.png
+
+[3] Loading sklearn digits dataset...
+   Shape: (1797, 64) (8x8 images = 64 features)
+   Samples per digit: [np.int64(178), np.int64(182), np.int64(177), np.int64(183), np.int64(181), np.int64(182), np.int64(181), np.int64(179), np.int64(174), np.int64(180)]
+  Saved: 01_digits_examples.png
+
+[4] PCA projection of digits...
+   Variance explained: 28.51%
+  Saved: 01_digits_pca.png
+
+[5] Analyzing digit confusion pairs...
+   Expected overlaps based on visual similarity:
+   * 4 vs 9 (open vs closed top loop)
+   * 3 vs 8 (number of enclosed loops)
+   * 1 vs 7 (vertical stroke orientation)
+  Saved: 01_confusion_pairs.png
+
+============================================================
+  EDA Complete!
+============================================================

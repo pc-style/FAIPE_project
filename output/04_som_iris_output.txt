@@ -1,0 +1,43 @@
+============================================================
+  TASK 4: SOM on Iris Dataset (Mandatory)
+============================================================
+
+[1] Loading Iris dataset...
+   Shape: (150, 4)
+   Features: ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)']
+   Species: [np.str_('setosa'), np.str_('versicolor'), np.str_('virginica')]
+
+[2] Training 3x3 SOM...
+   Training complete (200 epochs)
+
+[3] Creating species distribution heatmap...
+  Saved: 04_iris_som_heatmap.png
+
+[4] Analyzing dominant species per neuron...
+   Neuron 0: virginica (11/11, 100% pure)
+   Neuron 1: virginica (17/17, 100% pure)
+   Neuron 2: setosa (24/24, 100% pure)
+   Neuron 3: versicolor (15/18, 83% pure)
+   Neuron 4: versicolor (18/18, 100% pure)
+   Neuron 5: setosa (25/25, 100% pure)
+   Neuron 6: virginica (17/19, 89% pure)
+   Neuron 7: versicolor (11/13, 85% pure)
+   Neuron 8: versicolor (4/5, 80% pure)
+  Saved: 04_iris_dominant_species.png
+
+[5] Computing topology quality metrics...
+   Topographic Error: 0.027
+   Quantization Error: 0.564
+
+[6] Creating U-Matrix...
+  Saved: 04_iris_umatrix.png
+
+============================================================
+  Iris SOM Complete!
+============================================================
+
+Key Observations:
+   * Setosa forms a distinct cluster (easily separable)
+   * Versicolor/Virginica overlap (similar features)
+   * SOM preserves topology: similar -> nearby neurons
+   * This is dimensionality reduction, NOT classification

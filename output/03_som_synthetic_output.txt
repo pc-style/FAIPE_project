@@ -1,0 +1,36 @@
+============================================================
+  TASK 3: SOM on Synthetic Data
+============================================================
+
+[1] Loading synthetic digit-like data...
+   Shape: (400, 2)
+
+--------------------------------------------------
+  1D SOM (10 neurons)
+--------------------------------------------------
+  Saved: 03_som_1d_evolution.png
+   [OK] 1D SOM creates a 'chain' threading through data regions
+
+--------------------------------------------------
+  2D SOM (5x5 grid)
+--------------------------------------------------
+  Saved: 03_som_2d_evolution.png
+   [OK] 2D SOM unfolds like a sheet onto the data manifold
+
+--------------------------------------------------
+  COMPARISON: 1D vs 2D
+--------------------------------------------------
+
+   1D SOM: TE = 0.058, QE = 0.314
+   2D SOM: TE = 0.000, QE = 0.186
+  Saved: 03_som_1d_vs_2d.png
+
+============================================================
+  SOM Synthetic Complete!
+============================================================
+
+Key Observations:
+   * 1D SOM: Creates an ordering path through data
+   * 2D SOM: Preserves 2D neighborhood structure
+   * Learning rate decay -> gradual convergence
+   * Sigma decay -> shrinking neighborhood radius

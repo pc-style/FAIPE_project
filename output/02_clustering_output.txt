@@ -1,0 +1,52 @@
+============================================================
+  TASK 2: Classical Clustering Methods
+============================================================
+
+[1] Loading datasets...
+
+--------------------------------------------------
+  K-MEANS CLUSTERING
+--------------------------------------------------
+
+[2] Running elbow method + silhouette analysis...
+   Best k by silhouette: 9 (score: 0.189)
+  Saved: 02_kmeans_elbow_silhouette.png
+
+[3] K-Means with k=10 on digits...
+  Saved: 02_kmeans_digits.png
+
+--------------------------------------------------
+  HIERARCHICAL CLUSTERING
+--------------------------------------------------
+
+[4] Building dendrogram (200 sample subset)...
+  Saved: 02_hierarchical_dendrogram.png
+
+[5] Hierarchical clustering (10 clusters)...
+   Silhouette score: 0.178
+  Saved: 02_hierarchical_digits.png
+
+--------------------------------------------------
+  DBSCAN CLUSTERING
+--------------------------------------------------
+
+[6] Testing DBSCAN parameters...
+   eps=20: 25 clusters, 464 noise points
+   eps=30: 1 clusters, 1 noise points
+   eps=40: 1 clusters, 0 noise points
+   eps=50: 1 clusters, 0 noise points
+  Saved: 02_dbscan_comparison.png
+
+--------------------------------------------------
+  COMPARISON ON SYNTHETIC DATA
+--------------------------------------------------
+  Saved: 02_comparison_synthetic.png
+
+============================================================
+  Clustering Complete!
+============================================================
+
+Key Observations:
+   * K-Means: Works well for spherical clusters, forced fixed k
+   * Hierarchical: Reveals structure via dendrogram, no k needed upfront
+   * DBSCAN: Finds dense regions, identifies noise/outliers

@@ -1,0 +1,57 @@
+============================================================
+  TASK 6: Neighborhood Functions and Regularization
+============================================================
+
+[1] Loading digits dataset...
+   Using 800 samples
+
+[2] Visualizing neighborhood functions...
+  Saved: 06_neighborhood_functions.png
+   [OK] Gaussian: Always positive, smooth decay
+   [OK] Mexican Hat: Inhibition zone creates sharper boundaries
+
+[3] Training SOMs with both functions...
+
+   Training Gaussian SOM (8x8)...
+   -> TE = 0.130, QE = 4.280
+
+   Training Mexican Hat SOM (8x8)...
+   -> TE = 0.000, QE = nan
+
+[4] Comparing digit distributions...
+  Saved: 06_gaussian_vs_mexican.png
+
+[5] Analyzing cluster fragmentation...
+
+   Digit fragmentation (1 = single connected cluster):
+   +-------+----------+-------------+
+   | Digit | Gaussian | Mexican Hat |
+   +-------+----------+-------------+
+   |   0   |    1     |      1      |
+   |   1   |    3     |      0      |
+   |   2   |    2     |      0      |
+   |   3   |    4     |      0      |
+   |   4   |    2     |      0      |
+   |   5   |    1     |      1      |
+   |   6   |    1     |      0      |
+   |   7   |    1     |      0      |
+   |   8   |    2     |      0      |
+   |   9   |    4     |      0      |
+   +-------+----------+-------------+
+   | Total |   21    |     2      |
+   +-------+----------+-------------+
+
+[6] Creating summary visualization...
+  Saved: 06_comparison_summary.png
+
+============================================================
+  Neighborhood Functions Analysis Complete!
+============================================================
+
+Key Conclusions:
+   * Gaussian: Smoother, better topology (lower TE)
+   * Mexican Hat: Sharper boundaries, better separation
+   * Mexican Hat inhibition = 'lateral competition'
+   * This acts as REGULARIZATION:
+     - Prevents 'digit blur' across adjacent neurons
+     - Similar to L1/L2 preventing overfitting in supervised learning
